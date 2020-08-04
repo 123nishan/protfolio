@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Guy you looking for',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-
+        textSelectionColor: Color(0xffb31e43),
         primarySwatch: Colors.blue,
 
         visualDensity: VisualDensity.adaptivePlatformDensity,

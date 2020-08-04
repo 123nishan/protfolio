@@ -31,6 +31,8 @@ dependencies:
   characters:
   responsive_builder: ^0.2.0+2
   toast: ^0.1.5
+  url_launcher: ^5.5.0
+
 
 
 
@@ -62,6 +64,16 @@ flutter:
       fonts:
         - asset: assets/fonts/Ambit-Black.ttf
         - asset: assets/fonts/Ambit-Bold.ttf
+    - family: Mathison
+      fonts:
+        - asset: assets/fonts/Mathison-Regular.otf
+        - asset: assets/fonts/Mathison-Bold.otf
+    - family: Blackdeath
+      fonts:
+        - asset: assets/fonts/Blackdeath-Personal.ttf
+    - family: Romanttica
+      fonts:
+        - asset: assets/fonts/Romanttica.ttf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

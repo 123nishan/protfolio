@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
 
           body: Center(
             child: FractionallySizedBox(
-              widthFactor: 0.95,
+              widthFactor: 0.90,
               heightFactor: 0.95,
               child:  Container(
                 height: double.infinity,
@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(8),
                           image: DecorationImage(
 
-                            image: AssetImage('images/background.png'),
+                            image: AssetImage('assets/images/background.png'),
                             fit: BoxFit.cover,
                           )
                       ),
