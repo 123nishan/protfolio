@@ -24,6 +24,15 @@ dependencies:
   flutter:
     sdk: flutter
   polygon_clipper: ^1.0.2
+  auto_size_text: ^2.1.0
+  particles_flutter: ^0.1.2
+  material_design_icons_flutter: ^4.0.5345
+  flutter_svg: ^0.18.0
+  characters:
+  responsive_builder: ^0.2.0+2
+  toast: ^0.1.5
+
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -34,13 +43,25 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
   assets:
-    - images/profile.jpg
+    - assets/images/
+
+  fonts:
+    - family: roboto
+      fonts:
+        - asset: assets/fonts/RobotoMono-Italic-VariableFont_wght.ttf
+        - asset: assets/fonts/RobotoMono-VariableFont_wght.ttf
+    - family: Ambit
+      fonts:
+        - asset: assets/fonts/Ambit-Black.ttf
+        - asset: assets/fonts/Ambit-Bold.ttf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

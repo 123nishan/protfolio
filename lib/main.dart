@@ -1,5 +1,11 @@
+
 import 'package:flutter/material.dart';
 import 'package:polygon_clipper/polygon_clipper.dart';
+
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:protfolio/home.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -18,7 +24,8 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
 //      home: MyHomePage(title: 'Flutter Demo Home Page'),
-      home: MyHomePage(),
+     home: HomePage(),
+      //home: iPhoneXXS11Pro1(),
     );
   }
 }
@@ -32,12 +39,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  bool pressed = false;
 
   void _incrementCounter() {
     setState(() {
+    pressed=true;
 
-      _counter++;
     });
   }
 
@@ -62,19 +69,23 @@ class _MyHomePageState extends State<MyHomePage> {
               colors: [Color(0xffE0E0E0),Color(0xffF5F5F5)]
             )
           ),
-
-
-
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Card(
-                color: Colors.amber,
+
                 child: Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('images/background.png'),
+                      fit: BoxFit.cover,
+                    )
+                  ),
                   child: ListView(
                     children: <Widget>[
 
                           Container(
-                            height: 200,
+                            height: 150,
+
                            child: OverflowBox(
                              minHeight: 0.0,
                              minWidth: 0.0,
@@ -91,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     PolygonBoxShadow(color: Colors.grey, elevation: 5.0)
                                   ],
                                   child: Image(
-                                    image:  AssetImage('assets/images/profile.jpg'),
+                                    image:  AssetImage('images/profile.jpg'),
                                     fit: BoxFit.fill,
                                   ),
                                 ),
@@ -101,7 +112,61 @@ class _MyHomePageState extends State<MyHomePage> {
 
                            ),
 
-                          )
+                          ),
+
+                      Align(
+                        alignment: Alignment.centerLeft,
+                          child: Container(
+
+
+                            margin: EdgeInsets.fromLTRB(0, 5.0, 0, 0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                   Container(
+
+                                     child: Text(
+                                       "Hey, I'm Nishan  ",
+                                       style: TextStyle(
+                                           fontFamily: 'roboto',
+                                           fontWeight: FontWeight.w700,
+                                           fontStyle: FontStyle.italic,
+                                           fontSize: 90,
+                                           color: Colors.white
+                                       ),
+                                     ),
+
+
+                                   ),
+
+                                   Container(
+                                     height: 150,
+                                     child: InkWell(
+                                       onTap: null,
+                                       child: ClipPolygon(
+                                       sides: 8,
+                                       borderRadius: 5.0, // Default 0.0 degrees
+                                       rotate: 90.0, // Default 0.0 degrees
+                                       boxShadows: [
+                                         PolygonBoxShadow(color: Colors.black, elevation: 1.0),
+                                         PolygonBoxShadow(color: Colors.grey, elevation: 5.0)
+                                       ],
+                                       child: Image(
+                                         image:  AssetImage('images/profile.jpg'),
+                                         fit: BoxFit.fill,
+                                       ),
+                                     ),
+                                     ),
+                                   )
+                                ],
+
+                              ),
+                            ),
+
+
+                          ),
+
+
 
 
                     ],
