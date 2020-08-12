@@ -52,6 +52,7 @@ class _SecondrowState extends State<Secondrow> {
           ),
           Flexible(
             child: RaisedButton(
+              color: Colors.transparent,
               onPressed: (){
                 final Uri _emailLaunchUri = Uri(
                     scheme: 'mailto',

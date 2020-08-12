@@ -5,8 +5,9 @@ import 'package:polygon_clipper/polygon_clipper.dart';
 import 'package:protfolio/core/functions.dart';
 import 'package:protfolio/section/description.dart';
 import 'package:protfolio/section/first_row.dart';
+import 'package:protfolio/section/git_detail.dart';
 import 'package:protfolio/section/second_row.dart';
-import 'package:protfolio/section/third_row.dart';
+import 'package:protfolio/section/media_row.dart';
 class Body extends StatefulWidget {
   final sizingInformation;
 
@@ -22,28 +23,42 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     var mainWidth=MediaQuery.of(context).size.width;
     var mainHeight=MediaQuery.of(context).size.height;
-    return SingleChildScrollView(
-      child: Padding(
-        padding:  EdgeInsets.fromLTRB(paddingSize(mainHeight, 0.01),0 , paddingSize(mainHeight, 0.01), 0),
-        child: Column(
-          children: [
-            CustomContainer(),
-            Padding(
-              padding:  EdgeInsets.fromLTRB(0, paddingSize(mainHeight, 0.09), 0, 0),
+    return Padding(
+      padding:  EdgeInsets.fromLTRB(paddingSize(mainHeight, 0.01),0 , paddingSize(mainHeight, 0.01), 0),
+      child: Column(
+        children: [
+          CustomContainer(),
+          Flexible(
+            flex: 2,
+            child: Padding(
+              padding:  EdgeInsets.fromLTRB(0, paddingSize(mainHeight, 0.03), 0, 0),
               child: Secondrow(),
             ),
+          ),
 
-            Padding(
-              padding:  EdgeInsets.fromLTRB(0, paddingSize(mainHeight, 0.06), 0, 0),
+          Flexible(
+            flex: 1,
+            child: Padding(
+              padding:  EdgeInsets.fromLTRB(0, paddingSize(mainHeight, 0.008), 0, 0),
               child: Description(),
             ),
-            Padding(
-              padding:  EdgeInsets.fromLTRB(0, paddingSize(mainHeight, 0.06), 0, 0),
+          ),
+          Flexible(
+            flex: 2,
+            child: Padding(
+              padding:  EdgeInsets.fromLTRB(0, paddingSize(mainHeight, 0.03), 0, 0),
+              child: GitDetail(),
+            ),
+          ),
+          Flexible(
+            flex: 1,
+            child: Padding(
+              padding:  EdgeInsets.fromLTRB(0, paddingSize(mainHeight, 0.03), 0, 0),
               child: MediaRow(),
             ),
-          ],
+          ),
+        ],
 
-        ),
       ),
     );
   }
