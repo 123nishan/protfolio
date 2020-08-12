@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
 
           body: Center(
             child: FractionallySizedBox(
-              widthFactor: 0.90,
+              widthFactor: 0.95,
               heightFactor: 0.95,
               child:  Container(
                 height: double.infinity,
