@@ -114,13 +114,20 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  image:
-    dependency: "direct main"
+  logging:
+    dependency: transitive
     description:
-      name: image
+      name: logging
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.14"
+    version: "0.11.4"
+  lottie:
+    dependency: "direct main"
+    description:
+      name: lottie
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.1"
   matcher:
     dependency: transitive
     description:

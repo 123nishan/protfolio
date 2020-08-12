@@ -6,6 +6,7 @@ import 'package:protfolio/core/functions.dart';
 import 'package:protfolio/section/description.dart';
 import 'package:protfolio/section/first_row.dart';
 import 'package:protfolio/section/second_row.dart';
+import 'package:protfolio/section/third_row.dart';
 class Body extends StatefulWidget {
   final sizingInformation;
 
@@ -35,6 +36,10 @@ class _BodyState extends State<Body> {
             Padding(
               padding:  EdgeInsets.fromLTRB(0, paddingSize(mainHeight, 0.06), 0, 0),
               child: Description(),
+            ),
+            Padding(
+              padding:  EdgeInsets.fromLTRB(0, paddingSize(mainHeight, 0.06), 0, 0),
+              child: MediaRow(),
             ),
           ],
 
